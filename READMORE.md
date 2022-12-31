@@ -7,3 +7,5 @@
 # npm install --save-exact @babel/core@7.15.5
 # npm install --save-exact @babel/node@7.15.4
 # npm install --save-exact @babel/preset-env@7.15.6
+# static files
+# npm install --save-exact dotenv@10.0.0 => use env in nodejs
