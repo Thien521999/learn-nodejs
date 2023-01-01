@@ -9,3 +9,13 @@
 # npm install --save-exact @babel/preset-env@7.15.6
 # static files
 # npm install --save-exact dotenv@10.0.0 => use env in nodejs
+# npm install --save-exact mysql2@2.3.0
+# npm install --save-exact sequelize-cli@6.2.0
+# npx sequelize-cli init
+# npm install --save sequelize@6.6.2   
+# node_modules/.bin/sequelize init
+# Tao model: npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+# npm install --save mysql2@2.2.5
+# Tao migrations: npx sequelize-cli db:migrate
+# Tao Seeder: npx sequelize-cli seed:generate --name demo-user
+# npx sequelize-cli db:seed:all
