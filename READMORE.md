@@ -19,3 +19,6 @@
 # Tao migrations: npx sequelize-cli db:migrate
 # Tao Seeder: npx sequelize-cli seed:generate --name demo-user
 # npx sequelize-cli db:seed:all
+# search: sequelize datatype
+# file migrations: tu dong map vao file database 
+# npx sequelize-cli db:migrate
