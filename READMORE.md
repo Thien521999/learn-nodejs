@@ -22,3 +22,15 @@
 # search: sequelize datatype
 # file migrations: tu dong map vao file database 
 # npx sequelize-cli db:migrate
+# npm install --save bcryptjs@2.4.3
+
+
+## keyword
+# bcrpt npm
+
+
+
+## note
+# .env.example to push github
+# .env not push github
+# library bodyParser support get  tham so lay tu client
