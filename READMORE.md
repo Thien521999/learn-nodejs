@@ -34,3 +34,7 @@
 # .env.example to push github
 # .env not push github
 # library bodyParser support get  tham so lay tu client
+# ejs.co doc them
+
+# Controller: xem nhu la boss viec cua no chi dieu huong thong tin
+# services: ket noi den db or lay thong tin tu db len

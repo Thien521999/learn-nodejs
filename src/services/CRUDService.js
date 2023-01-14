@@ -14,12 +14,13 @@ export let createNewUser = (data) => {
         lastName: data.lastName,
         address: data.address,
         phonenumber: data.phonenumber,
-        gender: data.gender === '1' ? true : false,
+        gender: data.gender === "1" ? true : false,
         roleId: data.roleId,
       });
 
-      resolve('oke ');
-    } catch (error) {
+      // thoat khoi promise,giong nhu return User
+      resolve("oke");
+    } catch (e) {
       reject(e);
     }
   });
@@ -30,7 +31,20 @@ export let hashUserPassword = (password) => {
     try {
       const hashPassword = await bcrypt.hashSync(password, salt);
       resolve(hashPassword);
-    } catch (error) {
+    } catch (e) {
+      reject(e);
+    }
+  });
+};
+
+export const getAllUser = () => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      let users = db.User.findAll({
+        raw: true,
+      });
+      resolve(users);
+    } catch (e) {
       reject(e);
     }
   });
