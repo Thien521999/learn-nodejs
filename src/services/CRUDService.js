@@ -57,7 +57,7 @@ export const getUserInfoById = (userId) => {
         where: {
           id: userId,
         },
-        raw: true
+        raw: true,
       });
 
       if (user) {
@@ -74,10 +74,10 @@ export const updateUserData = (data) => {
   return new Promise(async (resolve, reject) => {
     try {
       const user = await db.User.findOne({
-        where: { id: data.id}
-      })
+        where: { id: data.id },
+      });
 
-      if(user) {
+      if (user) {
         user.firstName = data.firstName;
         user.lastName = data.lastName;
         user.address = data.address;
@@ -88,9 +88,25 @@ export const updateUserData = (data) => {
         resolve(allUser);
       }
       resolve();
-
     } catch (e) {
       reject(e);
     }
   });
-}
+};
+
+export const deleteUserById = (userId) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const user = await db.User.findOne({
+        where: { id: userId },
+      });
+
+      if (user) {
+        await user.destroy();
+      }
+      resolve();
+    } catch (e) {
+      reject(e);
+    }
+  });
+};
