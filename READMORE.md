@@ -38,3 +38,10 @@
 
 # Controller: xem nhu la boss viec cua no chi dieu huong thong tin
 # services: ket noi den db or lay thong tin tu db len
+
+## logic login BE:
+# validate 
+# check email exist
+# compare password
+# return userInfo
+# access_token: JWT json web token
