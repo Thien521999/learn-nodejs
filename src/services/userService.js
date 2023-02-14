@@ -115,20 +115,6 @@ const createNewUser = (data) => {
           errCode: 1,
           message: "Your email is already in used.Pls try enter another email!",
         });
-      } else if (
-        !data.email ||
-        !data.password ||
-        !data.firstName ||
-        !data.lastName ||
-        !data.address ||
-        !data.phonenumber ||
-        !data.gender ||
-        !data.roleId
-      ) {
-        resolve({
-          errCode: 2,
-          message: "Please enter all field",
-        });
       } else {
         const hashPasswordFromBcrypt = await hashUserPassword(data.password);
         await db.User.create({
@@ -169,9 +155,11 @@ const updateUserData = (data) => {
       });
 
       if (user) {
+        user.email = data.email;
         user.firstName = data.firstName;
         user.lastName = data.lastName;
         user.address = data.address;
+
         await user.save();
 
         resolve({
