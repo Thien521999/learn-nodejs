@@ -45,3 +45,18 @@
 # compare password
 # return userInfo
 # access_token: JWT json web token
+
+
+## Luu tru hinh anh trong thuc te : có 3 option
+# option1: luu tru anh vao 1 ben server thu ba vd: amazon web services s3(uu diem rat nhanh ,nhuoc diem phai tra phi)
+# option2: luu tru file anh truc tiep duoi database.Làm so de luu dc nhung dang file đấy. người ta dùng 1 kieu du lieu nhu la BLOB, nhuoc diem neu luu nhieu se nang 
+
+
+# khi up load anh len heroku 300 phut sau no se mat
+
+# ORM
+
+
+## Muon dung sequelize de luu anh co 2 anh:
+# cach 1: tu thang React doc file anh, chuyen file anh qua base64, sau do gui len server nodejs
+# cach 2: nem luon file len server nodejs , sau do doc file,....
